@@ -5,11 +5,11 @@ require_relative 'rentable'
 
 class Bike
 
-  STANDARD_WEIGHT = 200 # lbs
+  STANDARD_WEIGHT_LBS = 200 # lbs
 
   attr_accessor :id, :color, :price, :weight, :rented
 
-  def initialize(id, color, price, weight = STANDARD_WEIGHT, rented = false)
+  def initialize(id, color, price, weight = STANDARD_WEIGHT_LBS, rented = false)
     # Necessary Bike Information that probably shouldn't be abstracted!
     @id = id
     @color = color
