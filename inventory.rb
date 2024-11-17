@@ -1,7 +1,9 @@
 
 class Inventory
 
-  def initialize(items = [], maxNumItems = 10)
+  DEFAULT_MAX_ITEMS = 10
+
+  def initialize(items = [], maxNumItems = DEFAULT_MAX_ITEMS)
     @items = items
     @MAX_CARGO_ITEMS = maxNumItems
   end
