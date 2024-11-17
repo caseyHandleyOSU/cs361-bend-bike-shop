@@ -1,9 +1,10 @@
 # Bike
 
+require_relative 'inventory'
+
 class Bike
 
   STANDARD_WEIGHT = 200 # lbs
-  MAX_CARGO_ITEMS = 10
 
   attr_accessor :id, :color, :price, :weight, :rented, :cargo_contents
 
@@ -13,7 +14,7 @@ class Bike
     @price = price
     @weight = weight
     @rented = rented
-    @cargo_contents = []
+    @cargo = Inventory.new
   end
 
   def rent!
@@ -21,19 +22,19 @@ class Bike
   end
 
   def add_cargo(item)
-    self.cargo_contents << item
+    @cargo.add_item(item)
   end
 
   def remove_cargo(item)
-    self.cargo_contents.remove(item)
+    @cargo.remove_item(item)
   end
 
   def pannier_capacity
-    MAX_CARGO_ITEMS
+    return @cargo.max_capacity
   end
 
   def pannier_remaining_capacity
-    MAX_CARGO_ITEMS - self.cargo_contents.size
+    return @cargo.remaining_capacity
   end
 
 end
