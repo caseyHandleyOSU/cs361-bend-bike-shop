@@ -14,11 +14,11 @@ class Bike
     @color = color
     @base_price = price
     @weight = STANDARD_WEIGHT
-    @luggage = Luggage.new(Luggage::DEFAULT_MAX_CAPACITY, extra_items, self)
+    @luggage = Luggage.new(items: extra_items, bike: self)
   end
 
   def total_price
-    return @base_price + (LUGGAGE_COST_PER_LB * @luggage.weight) + (WEIGHT_COST_PER_LB * @weight)
+    return @base_price + (WEIGHT_COST_PER_LB * @weight) + (LUGGAGE_COST_PER_LB * @luggage.weight)
   end
 
   def total_weight
