@@ -17,4 +17,7 @@ class Bike
     @luggage = Luggage.new(Luggage::DEFAULT_MAX_CAPACITY, extra_items, self)
   end
 
+  def total_price
+    return @base_price + (LUGGAGE_COST_PER_LB * @luggage.weight) + (WEIGHT_COST_PER_LB * @weight)
+  end
 end
