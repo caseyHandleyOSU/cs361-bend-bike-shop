@@ -20,4 +20,9 @@ class Bike
   def total_price
     return @base_price + (LUGGAGE_COST_PER_LB * @luggage.weight) + (WEIGHT_COST_PER_LB * @weight)
   end
+
+  def total_weight
+    return @weight + luggage.weight
+  end
+
 end
