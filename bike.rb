@@ -14,7 +14,7 @@ class Bike
     @color = color
     @base_price = price
     @weight = STANDARD_WEIGHT
-    @luggage = Luggage.new(items: extra_items, bike: self)
+    @luggage = Luggage.new(items: extra_items)
   end
 
   def total_price
