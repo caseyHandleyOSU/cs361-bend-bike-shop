@@ -1,6 +1,7 @@
 class Luggage
 
   DEFAULT_MAX_CAPACITY = 10
+  WEIGHT_PER_ITEM = 10
 
   attr_reader :items
 
@@ -14,7 +15,7 @@ class Luggage
   end
 
   def weight
-    self.items.size * 10
+    self.items.size * WEIGHT_PER_ITEM
   end
 
 end
