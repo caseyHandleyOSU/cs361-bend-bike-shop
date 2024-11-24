@@ -7,7 +7,7 @@ class Bike
 
   attr_reader :id, :color, :price, :weight, :luggage
 
-  def initialize(id, color, price, extra_items)
+  def initialize(id:, color:, price:, extra_items:)
     @id = id
     @color = color
     @price = price
