@@ -4,6 +4,8 @@ require_relative 'luggage'
 class Bike
 
   STANDARD_WEIGHT = 200 # lbs
+  WEIGHT_COST_PER_LB = 2 
+  LUGGAGE_COST_PER_LB = 2
 
   attr_reader :id, :color, :price, :weight, :luggage
 
