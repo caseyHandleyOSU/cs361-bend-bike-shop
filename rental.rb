@@ -11,7 +11,7 @@ class Rental
   end
 
   def weight
-    self.bike.weight + self.bike.luggage.items.count
+    self.bike.total_weight
   end
 
 end
