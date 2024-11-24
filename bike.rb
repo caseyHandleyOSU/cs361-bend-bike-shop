@@ -22,7 +22,7 @@ class Bike
   end
 
   def total_weight
-    return @weight + luggage.weight
+    return @weight + @luggage.weight
   end
 
 end
